@@ -94,5 +94,25 @@ public class LinkedList {
 		return temp.data;
 	}
 	
+	//method to pop the last element from the linkedList, it returns the popped element
+	public int popLast() {
+		if(head == null) {
+			System.out.println("List is empty... Deletion operation is not possible");
+			return 0;
+		}
+		if(head.next == null) {
+			Node temp = head;
+			head = null;
+			return temp.data;
+		}
+		Node temp = head;
+		while(temp.next.next != null) {
+			temp = temp.next;
+		}
+		int data = temp.next.data;
+		temp.next = null;
+		return data;
+	}
+
 	
 }

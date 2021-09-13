@@ -17,7 +17,8 @@ public class Main {
 		
 		linkedList.print();
 		
-		linkedList.pop();
+		linkedList.popLast();
+		linkedList.popLast();
 		
 		linkedList.print();
 	}
