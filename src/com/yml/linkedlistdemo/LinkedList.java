@@ -29,7 +29,7 @@ public class LinkedList {
 	
 	//Method to print all the elements of the linkedList
 	public void  print() {
-		System.out.println("Linked list:");
+		System.out.println("\nLinked list:");
 		Node temp = head;
 		while(temp != null) {
 			System.out.print(temp.data+" -> ");
@@ -112,6 +112,25 @@ public class LinkedList {
 		int data = temp.next.data;
 		temp.next = null;
 		return data;
+	}
+	
+	
+	//Method to search for an element in the linkedList and return true if found and false if not found
+	public boolean search(int element) {
+		if(head == null) {
+			System.out.println("List is empty");
+			return false;
+		}
+		Node temp = head;
+		boolean isFound = false;
+		while(temp != null) {
+			if(temp.data == element) {
+				isFound =true;
+				break;
+			}
+			temp = temp.next;
+		}
+		return isFound;
 	}
 
 	
