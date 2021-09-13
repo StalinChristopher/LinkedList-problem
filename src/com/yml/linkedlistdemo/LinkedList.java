@@ -132,6 +132,29 @@ public class LinkedList {
 		}
 		return isFound;
 	}
+	
+	//Method to insert an element after the given value of the element in the linkedList
+	public boolean insertAfterValue(int value, int element) {
+		boolean isAdded = false;
+		Node temp = head;
+		if(head == null) {
+			System.out.println("LinkedList is empty...");
+			return isAdded;
+		}
+		while(temp != null) {
+			if(temp.data == value) {
+				Node newNode = new Node(element);
+				newNode.next = temp.next;
+				temp.next = newNode;
+				isAdded = true;
+				size++;
+				return isAdded;
+			}
+			temp = temp.next;
+		}
+		System.out.println("Value entered is not found in the linkedList. Hence no element was added");
+		return isAdded;
+	}
 
 	
 }

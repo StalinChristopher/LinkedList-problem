@@ -18,7 +18,10 @@ public class Main {
 		linkedList.print();
 		
 		linkedList.popLast();
+		
 		System.out.println("\nElement 30 : "+ linkedList.search(30));
+		
+		linkedList.insertAfterValue(30, 40);
 		
 		linkedList.print();
 	}
