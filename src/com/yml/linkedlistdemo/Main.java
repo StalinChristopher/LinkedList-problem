@@ -18,7 +18,7 @@ public class Main {
 		linkedList.print();
 		
 		linkedList.popLast();
-		linkedList.popLast();
+		System.out.println("\nElement 30 : "+ linkedList.search(30));
 		
 		linkedList.print();
 	}
