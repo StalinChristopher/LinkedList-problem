@@ -1,5 +1,10 @@
 package com.yml.linkedlistdemo;
 
+/**
+ * @author Stalin Christopher
+ * Class to write methods related to the linkedList
+ *
+ */
 public class LinkedList {
 	private int size;
 	private Node head;
@@ -14,7 +19,7 @@ public class LinkedList {
 		}
 	}
 	
-	//Method to push the element into the front of the linkedlist
+	//Method to push the element into the front of the linkedList
 	public void push(int data) {
 		Node newNode = new Node(data);
 		newNode.next = head;
@@ -22,7 +27,7 @@ public class LinkedList {
 		size++;
 	}
 	
-	//Method to print all the elements of the linkedlist
+	//Method to print all the elements of the linkedList
 	public void  print() {
 		System.out.println("Linked list:");
 		Node temp = head;
@@ -39,6 +44,7 @@ public class LinkedList {
 		Node newNode = new Node(data);
 		if(head == null) {
 			head = newNode;
+			size++;
 			isAdded = true;
 		}
 		else {
@@ -47,9 +53,35 @@ public class LinkedList {
 				temp = temp.next;
 			}
 			temp.next = newNode;
+			size++;
 			isAdded = true;
 		}
 		return isAdded;
+	}
+	
+	//Method to insert an element into the linkedList at a given position
+	public void insertAtPos(int pos, int data) {
+		if(pos<1) {
+			System.out.println("Invalid");
+		}
+		if(pos == 1 ) {
+			push(data);
+			size++;
+		}
+		else {
+			Node newNode = new Node(data);
+			Node temp = head;
+			int count = 1;
+			while(count<pos-1) {
+				temp = temp.next;
+				count++;
+			}
+			Node cur = temp.next;
+			temp.next = newNode;
+			newNode.next = cur;
+			size++;
+		}
+		
 	}
 	
 	
