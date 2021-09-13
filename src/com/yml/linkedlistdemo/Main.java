@@ -24,6 +24,10 @@ public class Main {
 		linkedList.insertAfterValue(30, 40);
 		
 		linkedList.print();
+		
+		linkedList.remove(40);
+		
+		linkedList.print();
 	}
 
 }

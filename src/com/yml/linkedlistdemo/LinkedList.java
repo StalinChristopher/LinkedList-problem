@@ -155,6 +155,36 @@ public class LinkedList {
 		System.out.println("Value entered is not found in the linkedList. Hence no element was added");
 		return isAdded;
 	}
+	
+	//Method to remove the given element, only if the element is present in the linkedList
+	public boolean remove(int element) {
+		if(!search(element)) {
+			System.out.println("Element not found... Deletion is not possible");
+			return false;
+		}
+		Node temp = head;
+		Node prev = null;
+		if(temp != null && temp.data == element) {
+			head =temp.next;
+			size--;
+			return true;
+		}
+		while(temp != null) {
+			if(temp.data == element ) {
+				size--;
+				prev.next = temp.next;
+				return true;
+			}
+			prev = temp;
+			temp = temp.next;
+		}
+		return false;
+	}
+	
+	//Method to find the size of the linkedList
+	public int size() {
+		return this.size;
+	}
 
 	
 }
