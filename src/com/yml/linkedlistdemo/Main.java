@@ -8,6 +8,7 @@ public class Main {
 		linkedList.append(56);
 		linkedList.append(30);
 		linkedList.append(70);
+		linkedList.insertAtPos(3, 10);
 		linkedList.print();
 	}
 
