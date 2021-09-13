@@ -81,7 +81,17 @@ public class LinkedList {
 			newNode.next = cur;
 			size++;
 		}
-		
+	}
+	
+	//method to pop the first element of the linkedList, it returns the deleted element
+	public int pop() {
+		if(head == null) {
+			System.out.println("List is empty... Deletetion operation is not posibile");
+			return 0;
+		}
+		Node temp = head;
+		head = temp.next;
+		return temp.data;
 	}
 	
 	

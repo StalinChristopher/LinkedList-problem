@@ -1,5 +1,9 @@
 package com.yml.linkedlistdemo;
 
+/**
+ * @author Stalin Christopher
+ * 
+ */
 public class Main {
 
 	public static void main(String[] args) {
@@ -8,7 +12,13 @@ public class Main {
 		linkedList.append(56);
 		linkedList.append(30);
 		linkedList.append(70);
+		
 		linkedList.insertAtPos(3, 10);
+		
+		linkedList.print();
+		
+		linkedList.pop();
+		
 		linkedList.print();
 	}
 
