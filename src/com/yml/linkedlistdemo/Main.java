@@ -8,7 +8,12 @@ public class Main {
 
 	public static void main(String[] args) {
 		System.out.println("Welcome to LinkedList program");
-		LinkedList linkedList = new LinkedList();
+		
+		/*Here linkedList of type Integer is created. Any type of LinkedList can be created since it is of
+		 *generic type
+		 */
+		LinkedList<Integer> linkedList = new LinkedList<Integer>();
+		
 		linkedList.append(56);
 		linkedList.append(30);
 		linkedList.append(70);
